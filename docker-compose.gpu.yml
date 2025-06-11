@@ -19,6 +19,8 @@ services:
     volumes:
       - ./app:/app/app
       - cache-whisper:/root/.cache
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
 volumes:
   cache-whisper:
